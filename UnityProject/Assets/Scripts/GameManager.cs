@@ -38,7 +38,16 @@ public class GameManager : MonoBehaviour
         print("生水管~");
         // 生成(物件);
         Instantiate(pipe);
+
+        // 生成(物件，座標，角度)
+        float y=Random. Range(-1f,1.2f);
+        // 區域欄位(不需要修飾詞)
+        Vector3 pos =new Vector3(10,y,0);
+        
+        // Quaternion.identity 代表零角度
+        Instantiate(pipe,pos,Quaternion.identity);
     }
+
 
     /// <summary>
     /// 遊戲失敗。
