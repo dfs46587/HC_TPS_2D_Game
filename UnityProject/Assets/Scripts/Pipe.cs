@@ -7,4 +7,18 @@ public class Pipe : Ground
         // 刪除(物件，延遲時間)
         Destroy(gameObject,2f);
     }
+
+    //掛此類別的 物件需要有件:Mesh Renderer
+    //在攝影機畫面外的時候會執行一次
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject, 1f);
+
+    }
+
+    //在攝影機內的時候執行一次
+    private void OnBecameVisible()
+    {
+        
+    }
 }

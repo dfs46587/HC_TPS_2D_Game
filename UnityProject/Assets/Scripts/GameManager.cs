@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     [Header("水管")]
     // GameObject 可以存放場景上的遊戲物件與專案內的預製物
     public GameObject pipe;
+    [Header("遊戲結算畫面")]
+    public GameObject goFinal;
+    [Header("遊戲結束")]
+    public static bool gameOver;
 
     // 修飾詞權限：
     // private 其他類別無法使用
@@ -54,6 +58,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
+        goFinal.SetActive(true);
+        gameOver = true;
+        CancelInvoke("SpawnPipe");
 
     }
 

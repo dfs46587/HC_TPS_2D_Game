@@ -1319,6 +1319,7 @@ MonoBehaviour:
   score: 0
   scoreHeight: 0
   pipe: {fileID: 3379918633709527166, guid: 932201f90fa98864ea68927e72f30066, type: 3}
+  goFinal: {fileID: 0}
 --- !u!4 &1498019172
 Transform:
   m_ObjectHideFlags: 0
@@ -1728,7 +1729,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 300
-  dead: 0
+  dead: 1
+  r2d: {fileID: 0}
+  goScore: {fileID: 0}
+  goGM: {fileID: 0}
 --- !u!50 &2131453246
 Rigidbody2D:
   serializedVersion: 4
@@ -1744,7 +1748,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
